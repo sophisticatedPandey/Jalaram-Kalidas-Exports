@@ -5,10 +5,15 @@
     box-sizing: border-box;
 }
 
+/* Body and Fonts */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -25,6 +30,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul {
@@ -32,6 +38,7 @@ header nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 
 header nav ul li {
@@ -44,6 +51,7 @@ header nav ul li a {
     font-weight: 600;
     padding: 10px;
     transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
 header nav ul li a:hover {
@@ -62,6 +70,8 @@ header nav ul li a:hover {
     color: white;
     text-align: center;
     position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero::after {
@@ -82,12 +92,15 @@ header nav ul li a:hover {
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 700;
+    color: #fff;
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    font-weight: 400;
+    color: #fff;
 }
 
 .cta-button {
@@ -98,6 +111,7 @@ header nav ul li a:hover {
     border-radius: 5px;
     font-size: 18px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .cta-button:hover {
@@ -116,13 +130,14 @@ h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #0044cc;
+    font-weight: 600;
 }
 
 /* About Us Section */
 .about-us img {
-    width: 100%;
+    width: 40%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-top: 30px;
 }
 
@@ -139,6 +154,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .product-item:hover {
@@ -183,6 +199,12 @@ ul li {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-item img {
@@ -204,7 +226,7 @@ ul li {
 }
 
 .map img {
-    width: 100%;
+    width: 40%;
     height: auto;
     border-radius: 10px;
 }
@@ -215,6 +237,7 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 
 footer p {
@@ -226,6 +249,7 @@ footer ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 footer ul li {
@@ -236,8 +260,32 @@ footer ul li a {
     color: white;
     font-size: 1rem;
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 footer ul li a:hover {
     color: #ffb100;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
 }
